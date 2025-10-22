@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ittai Rivero - Especialista en Ciberseguridad</title>
+    <script src="https://kit.fontawesome.com/c9ff70076a.js" crossorigin="ittaidev"></script>
+    <style>
+        /* Variables de colores y fuentes */
+        :root {
+            --primary-color: #00a8ff;
+            --secondary-color: #2d3436;
+            --accent-color: #00d2d3;
+            --dark-bg: #1e272e;
+            --light-bg: #f5f6fa;
+            --text-light: #f5f6fa;
+            --text-dark: #2d3436;
+            --card-bg: #2d3436;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h1, h2, h3 {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Header y navegación */
+        header {
+            background-color: rgba(30, 39, 46, 0.9);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--dark-bg) 0%, #2c3e50 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgwLCAxNjgsIDI1NSwgMC4wNSkiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjcGF0dGVybikiLz48L3N2Zz4=');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero-logo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            /* Eliminado el borde azul */
+        }
+
+        .hero h1 {
+            margin-bottom: 20px;
+            font-size: 3.5rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .hero-highlight {
+            color: var(--primary-color);
+        }
+
+        /* Secciones generales */
+        .section-light {
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+        }
+
+        .section-light h2::after {
+            background-color: var(--accent-color);
+        }
+
+        /* Formación */
+        .education-grid, .experience-grid, .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .education-card, .experience-card, .project-card {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .section-light .education-card, 
+        .section-light .experience-card, 
+        .section-light .project-card {
+            background-color: white;
+            color: var(--text-dark);
+        }
+
+        .education-card:hover, .experience-card:hover, .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .education-card h3, .experience-card h3, .project-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .education-date, .experience-date {
+            color: var(--accent-color);
+            font-weight: 500;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .section-light .education-date, 
+        .section-light .experience-date {
+            color: #0984e3;
+        }
+
+        .education-description, .experience-description {
+            margin-top: 15px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Tecnologías */
+        .tech-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .tech-category {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .section-light .tech-category {
+            background-color: white;
+        }
+
+        .tech-category h3 {
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 15px;
+        }
+
+        .tech-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .section-light .tech-item {
+            background-color: rgba(0, 0, 0, 0.03);
+        }
+
+        .tech-item:hover {
+            transform: translateY(-5px);
+            background-color: rgba(0, 168, 255, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .tech-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .tech-name {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Proyectos */
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .project-logo {
+            width: 100%;
+            max-width: 250px; /* Aumentado el tamaño máximo */
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            align-self: center;
+        }
+
+        .project-card p {
+            flex-grow: 1;
+        }
+
+        .project-link {
+            margin-top: 20px;
+            align-self: flex-start;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            padding: 50px 0 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-info {
+            margin-bottom: 30px;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            margin-bottom: 30px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                width: 70%;
+                height: calc(100vh - 80px);
+                background-color: var(--dark-bg);
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 50px;
+                transition: var(--transition);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .tech-grid {
+                grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+            }
+            
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .hero-text {
+                margin-bottom: 40px;
+            }
+            
+            .hero-logo {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .project-logo {
+                max-width: 200px; /* Ajuste para móviles */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="idlogonegativo.png" alt="Logo" class="logo-img">
+                <div class="logo-text">Ittai Rivero</div>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#formacion">Formación</a></li>
+                    <li><a href="#tecnologias">Tecnologías</a></li>
+                    <li><a href="#experiencia">Experiencia</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                <div class="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Especialista en <span class="hero-highlight">Ciberseguridad</span></h1>
+                    <p>Soy estudiante de ASIR con especialización en ciberseguridad. Apasionado por la protección de sistemas y datos, y comprometido con el desarrollo de infraestructuras seguras y escalables.</p>
+                    <a href="#contacto" class="btn">Contactar</a>
+                </div>
+                <img src="idlogonegativo.png" alt="Icono Personal" class="hero-logo">
+            </div>
+        </div>
+    </section>
+
+    <!-- Formación Académica -->
+    <section id="formacion" class="section-light">
+        <div class="container">
+            <h2>Formación e Idiomas</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <h3>CFGS Administración de Sistemas Informáticos en Red (ASIR)</h3>
+                    <span class="education-date">2023 - Actualmente</span>
+                    <p>Cesur</p>
+                    <p class="education-description">Formación especializada en administración de sistemas, redes informáticas y seguridad, con enfoque en infraestructuras empresariales y protección de datos.</p>
+                </div>
+                <div class="education-card">
+                    <h3>CP Nivel 3 de Seguridad Informática</h3>
+                    <span class="education-date">2024</span>
+                    <p>Focan - 500 horas</p>
+                    <p class="education-description">Curso especializado en ciberseguridad que cubre análisis de vulnerabilidades, pentesting, hardening de sistemas y protección de infraestructuras críticas.</p>
+                </div>
+                <div class="education-card">
+                    <h3>Inglés: B2 (Certificación Cambridge)</h3>
+                    <span class="education-date">Certificado</span>
+                    <p>Certificación oficial de nivel B2 de inglés</p>
+                    <p class="education-description">Competencia lingüística avanzada que permite comunicación fluida en entornos profesionales internacionales y comprensión de documentación técnica en inglés.</p>
+                </div>
+                <div class="education-card">
+                    <h3>Programación Web en el Entorno Cliente</h3>
+                    <span class="education-date">06/2022-07/2022</span>
+                    <p>Fuerteventura 2000 - 180 Horas</p>
+                    <p class="education-description">Formación en desarrollo frontend con JavaScript, HTML5 y CSS3, enfocada en crear interfaces de usuario interactivas y responsivas.</p>
+                </div>
+                <div class="education-card">
+                    <h3>Soporte de Tecnologías de la Información</h3>
+                    <span class="education-date">Diciembre 2021</span>
+                    <p>Google - Coursera</p>
+                    <p class="education-description">Certificación profesional en soporte TI que cubre resolución de problemas, sistemas operativos, administración de sistemas y atención al cliente técnico.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tecnologías -->
+    <section id="tecnologias">
+        <div class="container">
+            <h2>Tecnologías</h2>
+            <div class="tech-container">
+                <div class="tech-category">
+                    <h3>Ciberseguridad</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <i class="fas fa-shield-alt tech-icon"></i>
+                            <span class="tech-name">Firewalls</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-user-secret tech-icon"></i>
+                            <span class="tech-name">Privacidad</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-lock tech-icon"></i>
+                            <span class="tech-name">Cifrado</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-fingerprint tech-icon"></i>
+                            <span class="tech-name">OSINT</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-bug tech-icon"></i>
+                            <span class="tech-name">Metasploit</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-search tech-icon"></i>
+                            <span class="tech-name">Nmap</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>Sistemas</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <i class="fab fa-linux tech-icon"></i>
+                            <span class="tech-name">Linux</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-windows tech-icon"></i>
+                            <span class="tech-name">Windows Server</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-server tech-icon"></i>
+                            <span class="tech-name">Active Directory</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-cloud tech-icon"></i>
+                            <span class="tech-name">Azure</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-aws tech-icon"></i>
+                            <span class="tech-name">AWS</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-database tech-icon"></i>
+                            <span class="tech-name">SQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>Despliegue</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <i class="fab fa-html5 tech-icon"></i>
+                            <span class="tech-name">HTML5</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fa-solid fa-cloud tech-icon"></i>
+                            <span class="tech-name">Cloud Segura</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fa-solid fa-brain tech-icon"></i>
+                            <span class="tech-name">IA</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-cloudflare tech-icon"></i>
+                            <span class="tech-name">Cloudflare</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-github tech-icon"></i>
+                            <span class="tech-name">GitHub</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-docker tech-icon"></i>
+                            <span class="tech-name">Docker</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencia Laboral -->
+    <section id="experiencia" class="section-light">
+        <div class="container">
+            <h2>Experiencia Laboral</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <h3>Técnico Informático</h3>
+                    <span class="experience-date">Actualidad</span>
+                    <p>Prácticas en Alten España</p>
+                    <div class="experience-description">
+                        <p>Funciones realizadas:</p>
+                        <ul>
+                            <li>Administración y mantenimiento de sistemas y redes corporativas</li>
+                            <li>Resolución de incidencias técnicas de nivel 1</li>
+                            <li>Gestión de usuarios en Active Directory y sistemas de autenticación</li>
+                            <li>Monitoreo de sistemas y respuesta ante incidentes de seguridad</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <h3>Técnico Informático</h3>
+                    <span class="experience-date">11/2024 - 12/2024</span>
+                    <p>Disoft</p>
+                    <div class="experience-description">
+                        <p>Funciones realizadas:</p>
+                        <ul>
+                            <li>Instalación y configuración de software y hardware</li>
+                            <li>Mantenimiento preventivo de equipos informáticos</li>
+                            <li>Gestión de inventario de equipos y periféricos</li>
+                            <li>Asistencia en la implementación de pequeñas redes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos Personales -->
+    <section id="proyectos">
+        <div class="container">
+            <h2>Proyectos Personales</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <!-- <img src="bit/logo 2.0 transparente.png" alt="Bitcld Logo" class="project-logo"> -->
+                    <h3>BitCLD.com</h3>
+                    <p>Plataforma Autogestionada de Servicios en la Nube con Infraestructura Segura, Escalable y Monitorizada. Desarrollé una solución integral que permite gestionar servicios en la nube de forma autónoma, con especial énfasis en la seguridad y escalabilidad.</p>
+                    <p class="education-description">BitCLD es una Infraestructura segura y eficiente basada en contenedores, con servicios integrados de productividad, monitorización y acceso remoto. Diseñada para ofrecer privacidad, control y rendimiento sin exponer puertos a Internet. </p>
+                    <a href="https://bitcld.com" class="btn project-link" target="_blank">Ver Proyecto</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <footer id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="contact-info">
+                    <h3>Contacto</h3>
+                    <p>Email: ittairivero@gmail.com</p>
+                </div>
+                <div class="social-links">
+                    <a href="mailto:ittairivero@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/ittaidev" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="https://x.com/ittaidev" class="social-link"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.t.me/ittaidev" class="social-link"><i class="fab fa-telegram"></i></a>
+                </div>
+                <p class="contact-info">&copy; Ittai Rivero | @ittaidev</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menú hamburguesa
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Cerrar menú al hacer clic en un enlace
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Animación de scroll suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
