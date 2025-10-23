@@ -38,7 +38,7 @@ Privacidad, control y eficiencia sin necesidad de exponer puertos a Internet.
 
 ## 📫 Contacto
 
-- **Web personal:** [ittaidev.com](https://ittaidev.com)  
+- **Web personal:** [ittaidev.com](https://ittai.dev)  
 - **LinkedIn:** [linkedin.com/in/ittaidev](https://linkedin.com/in/ittairivero)  
 - **GitHub:** [github.com/ittaidev](https://github.com/ittaidev)  
 - **Correo:** ittairivero@gmail.com  
