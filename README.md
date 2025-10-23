@@ -38,10 +38,10 @@ Privacidad, control y eficiencia sin necesidad de exponer puertos a Internet.
 
 ## 📫 Contacto
 
-- **Web personal:** [ittai.dev](https://ittai.dev)  
-- **LinkedIn:** [linkedin.com/in/ittairivero](https://linkedin.com/in/ittairivero)  
-- **GitHub:** [github.com/ittaidev](https://github.com/ittaidev)  
-- **Correo:** ittairivero@gmail.com  
+- **Web personal:**   [ittai.dev](https://ittai.dev)  
+- **LinkedIn:**       [linkedin.com/in/ittairivero](https://linkedin.com/in/ittairivero)  
+- **GitHub:**         [github.com/ittaidev](https://github.com/ittaidev)  
+- **Correo:**         ittairivero@gmail.com  
 
 ---
 
