@@ -1,4 +1,4 @@
-# 🌐 Ittai Rivero — ittaidev
+# Ittai Rivero — ittaidev
 
 **Estudiante de ASIR | Ciberseguridad & Sistemas | Desarrollador autodidacta**
 
@@ -8,7 +8,7 @@ Mi objetivo es seguir creciendo profesionalmente en entornos técnicos, combinan
 
 ---
 
-## 🧭 Sobre mí
+## Sobre mí
 
 Actualmente estudio el **CFGS en Administración de Sistemas Informáticos en Red (ASIR)** en **Cesur**, mientras realizo mis prácticas en **Alten España**, donde colaboro en entornos reales de infraestructura y soporte IT.  
 
@@ -16,7 +16,7 @@ Además, complemento mi formación con cursos y certificaciones relacionadas con
 
 ---
 
-## 🛠️ Competencias y áreas de interés
+## Competencias y áreas de interés
 
 - Administración de servidores Linux y Windows  
 - Ciberseguridad y gestión de accesos  
@@ -27,9 +27,9 @@ Además, complemento mi formación con cursos y certificaciones relacionadas con
 
 ---
 
-## 🚀 Proyectos personales
+## Proyectos personales
 
-### [bitCLD](https://bitcld.com)
+### [BitCLD](https://bitcld.com)
 **Ecosistema autoalojado de servicios en la nube.**  
 Infraestructura modular basada en contenedores, con servicios integrados de productividad, monitorización y seguridad.  
 Privacidad, control y eficiencia sin necesidad de exponer puertos a Internet.
