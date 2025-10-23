@@ -1,6 +1,6 @@
 # Ittai Rivero — @ittaidev
 
-**Estudiante de ASIR | Ciberseguridad & Sistemas
+Estudiante de ASIR | Ciberseguridad & Sistemas
 
 Bienvenido a mi página personal: un espacio donde presento mi trayectoria, proyectos y evolución dentro del ámbito de la administración de sistemas y la ciberseguridad.  
 
