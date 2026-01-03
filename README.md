@@ -1,6 +1,6 @@
 # Ittai Rivero — @ittaidev
 
-Estudiante de ASIR | Ciberseguridad & Sistemas
+Consultor TI Junior - Soporte de Sistemas
 
 Bienvenido a mi página personal: un espacio donde presento mi trayectoria, proyectos y evolución dentro del ámbito de la administración de sistemas y la ciberseguridad.  
 
@@ -10,7 +10,7 @@ Mi objetivo es seguir creciendo profesionalmente en entornos técnicos, combinan
 
 ## Sobre mí
 
-Actualmente estudio el **CFGS en Administración de Sistemas Informáticos en Red (ASIR)** en **Cesur**, mientras realizo mis prácticas en **Alten España**, donde colaboro en entornos reales de infraestructura y soporte IT.  
+Actualmente he finalizado el **CFGS en Administración de Sistemas Informáticos en Red (ASIR)** en **Cesur**. 
 
 Además, complemento mi formación con cursos y certificaciones relacionadas con **seguridad informática, redes y sistemas Linux**, manteniendo siempre una mentalidad de aprendizaje constante.
 
@@ -41,9 +41,6 @@ Privacidad, control y eficiencia sin necesidad de exponer puertos a Internet.
 - **Web personal:**   [ittai.dev](https://ittai.dev)  
 - **LinkedIn:**       [linkedin.com/in/ittairivero](https://linkedin.com/in/ittairivero)  
 - **GitHub:**         [github.com/ittaidev](https://github.com/ittaidev)  
-- **Correo:**         ittairivero@gmail.com  
+- **Correo:**         contacto@ittairivero.com  
 
 ---
-
-> *“La simplicidad y la seguridad no están reñidas, solo requieren diseño inteligente.”*  
-> — *Ittai Rivero*
