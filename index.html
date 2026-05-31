@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <meta name="description" content="Página web de Ittai Rivero">
   <meta name="author" content="ittaidev">
-  <link rel="icon" href="me.png" type="image/png">
-  <meta property="og:title" content="Ittai Rivero | IT Support Specialist">
-  <meta property="og:image" content="https://ittai.dev/me.webp">
+  <link rel="icon" href="me.webp" type="image/png">
   <title>Ittai Rivero</title>
 
   <!-- Fuentes y estilos base -->
@@ -77,17 +75,6 @@
       display: inline-block;
     }
 
-    /* Texto de bienvenida */
-    .bio {
-      font-size: 18px;
-      font-weight: 300;
-      line-height: 1.6;
-      color: #2d2d2d;
-      max-width: 600px;
-      margin: 0 auto 40px;
-      padding: 0 20px;
-    }
-
     /* Iconos sociales */
     .social-links {
       margin: 25px auto 40px;
@@ -121,13 +108,21 @@
       box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.15);
     }
 
-    /* Colores específicos al hover */
+    /* Colores específicos al hover según el nuevo orden y requerimientos */
     .social-icon.linkedin:hover {
       color: #0077b5;
     }
 
+    .social-icon.docs:hover {
+      color: #000000;  /* Negro como X */
+    }
+
     .social-icon.github:hover {
-      color: #333333;
+      color: #6e40c9;  /* Morado estilo GitHub moderno */
+    }
+
+    .social-icon.telegram:hover {
+      color: #0088cc;
     }
 
     .social-icon.x:hover {
@@ -141,14 +136,6 @@
       background: #d0d0d0;
       margin: 15px auto;
       border-radius: 2px;
-    }
-
-    /* Footer */
-    footer {
-      margin-top: 50px;
-      font-size: 14px;
-      color: #8a8a8a;
-      font-weight: 300;
     }
 
     /* Animación de entrada */
@@ -184,11 +171,6 @@
         margin: 10px auto 20px;
       }
 
-      .bio {
-        font-size: 16px;
-        padding: 0 15px;
-      }
-
       .social-icon {
         width: 48px;
         height: 48px;
@@ -220,40 +202,58 @@
     <div class="subtitle">IT Support Specialist | Graduado en ASIR</div>
     <div class="divider"></div>
     
-    <!-- <div class="bio">
-  
-    </div> -->
 
-    <!-- Iconos sociales -->
     <div class="social-links">
+      <!-- LinkedIn -->
       <a href="https://linkedin.com/in/ittairivero" 
          target="_blank" 
          rel="noopener noreferrer"
          class="social-icon linkedin"
+         title="LinkedIn"
          aria-label="LinkedIn">
         <i class="fab fa-linkedin-in"></i>
       </a>
       
+      <!-- Documentación personal (docs.ittai.dev) -->
+      <a href="https://docs.ittai.dev" 
+         target="_blank" 
+         rel="noopener noreferrer"
+         class="social-icon docs"
+         title="Documentación personal"
+         aria-label="Documentación personal">
+        <i class="fas fa-book"></i>
+      </a>
+
+      <!-- GitHub -->
       <a href="https://github.com/ittaidev" 
          target="_blank" 
          rel="noopener noreferrer"
          class="social-icon github"
+         title="GitHub"
          aria-label="GitHub">
         <i class="fab fa-github"></i>
       </a> 
-      
+
+      <!-- Telegram -->
+      <a href="https://t.me/ittaidev" 
+         target="_blank" 
+         rel="noopener noreferrer"
+         class="social-icon telegram"
+         title="Telegram"
+         aria-label="Telegram">
+        <i class="fab fa-telegram-plane"></i>
+      </a>
+
+      <!-- X (Twitter) -->
       <a href="https://x.com/ittaidev" 
          target="_blank" 
          rel="noopener noreferrer"
          class="social-icon x"
+         title="X (Twitter)"
          aria-label="X (Twitter)">
         <i class="fab fa-x-twitter"></i>
       </a>
     </div>
-
-    <!-- <footer>
-      <p></p>
-    </footer> -->
   </div>
 </body>
 </html>
